@@ -4,21 +4,14 @@ import { Content } from "../components/Content";
 
 export const Intro: FC = () => {
   return (
-    <div className="hero bg-base-200 mb-8">
+    <div className="hero bg-base-200 md:mb-8">
       <Content className="hero-content flex-col md:flex-row-reverse">
         <img
           width={432}
           height={433}
           src="profile-pc.webp"
           alt="Michael Allen Elguira"
-          className="rounded-3xl shadow-2xl mb-0 md:mb-[-3rem]"
-        />
-        <link
-          rel="preload"
-          fetchPriority="high"
-          as="image"
-          href="/profile-pc.webp"
-          type="image/webp"
+          className="rounded-3xl md:shadow-2xl shadow-xl mb-0 md:mb-[-3rem]"
         />
         <div>
           <span className="text-lg">Hi, my name is Michael Allen Elguira</span>

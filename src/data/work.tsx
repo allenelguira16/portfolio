@@ -52,7 +52,7 @@ export const experiences: TExperience[] = [
         role: "Senior Frontend Engineer",
         date: "October 2023 - present",
         responsibilities: [
-          "Developed responsive and interactive web applications using React, TypeScript, and other modern technologies, improving user experience and performance.",
+          "Developed responsive and interactive web applications using React, TypeScript, WCAG2.1, and other modern technologies, improving user experience and performance.",
           "Designed and optimized CI/CD pipelines using GitLab CI/CD and Jenkins, reducing deployment time and minimizing manual errors.",
           "Wrote and maintained unit and integration tests with Jest, enhancing application reliability and reducing bugs before production.",
           "Collaborated closely with cross-functional teams, including developers, designers, and stakeholders, to ensure timely delivery of high-quality, scalable solutions.",
@@ -61,12 +61,14 @@ export const experiences: TExperience[] = [
     ],
     projects: [
       {
-        title: "ActiveNet CUI",
+        title: "ActiveNet Client UI",
         role: "Senior Frontend Engineer",
+        link: "https://www.activenetwork.com/blog/activenet-cui-release-a-launch-like-no-other",
       },
       {
-        title: "ActiveNet AUI",
+        title: "ActiveNet Admin UI",
         role: "Senior Frontend Engineer",
+        link: "https://www.linkedin.com/posts/userexperience-techupgrade-frontdeskefficiency-share-7355632673140207617-Pgki/",
       },
     ],
   },
@@ -187,25 +189,25 @@ export const experiences: TExperience[] = [
         title: "Tres Marias Sweets",
         description:
           "An online ordering system for Tres Marias Sweets\nWritten in Vue.js, and TailwindCSS in frontend and using Laravel in backend",
-        link: "https://github.com/AllenElguira16/TresMariasSweets",
+        link: "https://github.com/allenelguira16/tres-marias-sweets",
       },
       {
-        title: "piso-print-kiosk",
+        title: "Piso Print Kiosk",
         description:
           "A coin based kiosk that prints when a coin is slotted to the machine\nWritten in React, and TailwindCSS in frontend and Arduino in hardware",
-        link: "https://github.com/AllenElguira16/piso-print-kiosk",
+        link: "https://github.com/allenelguira16/piso-print-kiosk",
       },
       {
         title: "Stronghold Insurance Management and Information System",
         description:
           "A management system for Stronghold Company\nWritten in React, and TailwindCSS in frontend and NodeJS in backend",
-        link: "https://github.com/AllenElguira16/SIMIS",
+        link: "https://github.com/allenelguira16/simis",
       },
       {
         title: "E-Learning",
         description:
           "An interactive e-learning service\nWritten in React, and TailwindCSS in frontend and NodeJS in backend",
-        link: "https://github.com/AllenElguira16/E-Learning",
+        link: "https://github.com/allenelguira16/e-learning",
       },
     ],
   },

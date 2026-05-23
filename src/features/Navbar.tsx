@@ -1,7 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
+import { MdLightMode, MdOutlineNightlightRound } from "react-icons/md";
+
+const useTheme = () => {
+  type Theme = "dark" | "light";
+
+  const [theme, setTheme] = useState<Theme>(() => {
+    return (
+      (document.documentElement.getAttribute("data-theme") as Theme) || "light"
+    );
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  return [
+    theme,
+    () => setTheme((prev) => (prev === "dark" ? "light" : "dark")),
+  ] as const;
+};
 
 export const Navbar = () => {
+  const [theme, toggleTheme] = useTheme();
   const [isNavbarHidden, setIsNavbarHidden] = useState(true);
 
   const toggleNavbar = () => setIsNavbarHidden(!isNavbarHidden);
@@ -43,7 +65,7 @@ export const Navbar = () => {
         <div
           className={cn(
             "flex-none sm:inline-block w-full sm:w-auto",
-            isNavbarHidden && "hidden"
+            isNavbarHidden && "hidden",
           )}
         >
           <ul className="menu menu-horizontal px-1 flex-col sm:flex-row">
@@ -61,6 +83,15 @@ export const Navbar = () => {
               <a href="#work" className="font-bold">
                 Work
               </a>
+            </li>
+            <li>
+              <button className="text-2xl font-bold" onClick={toggleTheme}>
+                {theme === "dark" ? (
+                  <MdOutlineNightlightRound />
+                ) : (
+                  <MdLightMode />
+                )}
+              </button>
             </li>
           </ul>
         </div>
